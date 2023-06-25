@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/logInScreenFragment">
+    <fragment
+        android:id="@+id/logInScreenFragment"
+        android:name="com.invictastudios.automate.ui.auth_screens.log_in_screen.LogInScreenFragment"
+        android:label="fragment_log_in_screen"
+        tools:layout="@layout/fragment_log_in_screen" >
+        <action
+            android:id="@+id/action_logInScreenFragment_to_signUpScreenFragment"
+            app:destination="@id/signUpScreenFragment" />
+        <action
+            android:id="@+id/action_logInScreenFragment_to_vehiclesScreenFragment"
+            app:destination="@id/vehiclesScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpScreenFragment"
+        android:name="com.invictastudios.automate.ui.auth_screens.sign_up_screen.SignUpScreenFragment"
+        android:label="SignUpScreenFragment"
+        tools:layout="@layout/fragment_sign_up_screen"/>
+    <fragment
+        android:id="@+id/vehiclesScreenFragment"
+        android:name="com.invictastudios.automate.ui.vehicles_screen.VehiclesScreenFragment"
+        android:label="fragment_vehicles_screen"
+        tools:layout="@layout/fragment_vehicles_screen">
+        <action
+            android:id="@+id/action_vehiclesScreenFragment_to_accountScreenFragment"
+            app:destination="@id/accountScreenFragment" />
+        <action
+            android:id="@+id/action_vehiclesScreenFragment_to_serviceStationsScreenFragment"
+            app:destination="@id/serviceStationsScreenFragment" />
+        <action
+            android:id="@+id/action_vehiclesScreenFragment_to_vehicleDetailScreenFragment"
+            app:destination="@id/vehicleDetailScreenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/serviceStationsScreenFragment"
+        android:name="com.invictastudios.automate.ui.service_stations_screen.ServiceStationsScreenFragment"
+        android:label="fragment_service_stations_screen"
+        tools:layout="@layout/fragment_service_stations_screen" >
+        <action
+            android:id="@+id/action_serviceStationsScreenFragment_to_vehiclesScreenFragment"
+            app:destination="@id/vehiclesScreenFragment" />
+        <action
+            android:id="@+id/action_serviceStationsScreenFragment_to_accountScreenFragment"
+            app:destination="@id/accountScreenFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/accountScreenFragment"
+        android:name="com.invictastudios.automate.ui.account_screen.AccountScreenFragment"
+        android:label="fragment_account_screen"
+        tools:layout="@layout/fragment_account_screen" >
+        <action
+            android:id="@+id/action_accountScreenFragment_to_vehiclesScreenFragment"
+            app:destination="@id/vehiclesScreenFragment" />
+        <action
+            android:id="@+id/action_accountScreenFragment_to_serviceStationsScreenFragment"
+            app:destination="@id/serviceStationsScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/vehicleDetailScreenFragment"
+        android:name="com.invictastudios.automate.ui.vehicle_detail_screen.VehicleDetailScreenFragment"
+        android:label="fragment_vehicle_detail_screen"
+        tools:layout="@layout/fragment_vehicle_detail_screen" >
+        <action
+            android:id="@+id/action_vehicleDetailScreenFragment_to_servicesMadeScreenFragment"
+            app:destination="@id/servicesMadeScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicesMadeScreenFragment"
+        android:name="com.invictastudios.automate.ui.services_made_screen.ServicesMadeScreenFragment"
+        android:label="fragment_services_made_screen"
+        tools:layout="@layout/fragment_services_made_screen" >
+        <action
+            android:id="@+id/action_servicesMadeScreenFragment_to_servicesMadeDetailScreenFragment"
+            app:destination="@id/servicesMadeDetailScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicesMadeDetailScreenFragment"
+        android:name="com.invictastudios.automate.ui.service_made_details_screen.ServicesMadeDetailScreenFragment"
+        android:label="fragment_services_made_detail_screen"
+        tools:layout="@layout/fragment_services_made_detail_screen" />
+
+</navigation>
